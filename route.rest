@@ -1,0 +1,63 @@
+GET http://localhost:3001/subscribers/
+
+###
+
+GET http://localhost:3001/subscribers/65340f844f034919cd5bfd00
+
+###
+
+PATCH http://localhost:3001/subscribers/64d9721acf1fd9faa8c4cbf5
+Content-Type: application/json
+
+{
+  "email": "bbchannel@extra.com"
+}
+
+###
+POST http://localhost:3001/subscribers/ayaya/
+Content-Type: application/json
+
+{
+  "email": "ayaya@golden.com",
+  "password": "5141919"
+}
+
+###
+DELETE http://localhost:3001/subscribers/65340cd5a269a985915d445a
+
+###
+POST http://localhost:3001/register/
+Content-Type: application/json
+
+{
+  "email": "ayaya@golden.com",
+  "password": "5141919"
+}
+
+###
+POST http://localhost:3001/login/
+Content-Type: application/json
+
+{
+  "email": "AYAYA@golden.com",
+  "password": "123456"
+}
+
+###
+GET http://localhost:3001/users/65340f844f034919cd5bfd00/avatar/
+Content-Type: application/json
+
+###
+GET http://localhost:3001/items/
+Content-Type: : application/json
+
+###
+POST http://localhost:3001/buy/
+Content-Type: application/json
+
+{
+  "userItems": [
+    {"id": "6536e904ce60b909ac9d4696", "quantity": "2"},
+    {"id": "6536e904ce60b909ac9d4697", "quantity": "3" }
+  ]
+}
