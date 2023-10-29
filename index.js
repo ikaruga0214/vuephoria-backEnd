@@ -136,8 +136,8 @@ app.post("/create-checkout-session", async (req, res) => {
           quantity: item.quantity,
         };
       }),
-      success_url: "http://localhost:5173/",
-      cancel_url: "http://localhost:5173/",
+      success_url: "https://vuephoria-backend.onrender.com",
+      cancel_url: "https://vuephoria-backend.onrender.com",
     });
 
     res.status(200).json({ url: session.url });
