@@ -284,6 +284,10 @@ const verifytoken = async (req, res, next) => {
   } catch (err) {}
 };
 
+app.get('*', (req, res)=> {
+  res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
+});
+
 app.get("/items/", async (req, res) => {
   try {
     const itemCollections = await Item.find();
